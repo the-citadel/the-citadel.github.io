@@ -1,3 +1,13 @@
 section {
 	margin: 5rem 0;
 }
+
+.colors {
+	margin-bottom: 3rem;
+}
+
+.colors > div {
+	min-height: 15vw;
+	padding: 2rem;
+	flex: 1;
+}

@@ -1,8 +1,161 @@
 .wrapper {
 	padding-left: $padding__wrapper;
 	padding-right: $padding__wrapper;
+	max-width: 2000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.masthead {
+	background-color: $citadel_navy;
+}
+
+.main-nav {
+	background-color: $citadel_blue;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	a {
+		color: #FFFFFF;
+	}
+
+	ul:first-of-type:not(.submenu) {
+		@include flex-center;
+		@include flex-container;
+
+		> li {
+			@include flex-middle;
+			@include flex-item;
+		}
+	}
+
+	.submenu {
+		background-color: #FFFFFF;
+		color: $shako;
+	}
+}
+
+.entry-header {
+	background-color: $pt_barracks_20;
+	padding-top: $size_15;
+	padding-bottom: $size_15;
+
+	h1 {
+		text-align: center;
+		margin: 0 auto;
+	}
+}
+
+.page-content {
+	padding-top: 0;
+	padding-bottom: $size_17;
+
+	@include media(tablet) {
+		padding-top: $size_17;
+	}
+}
+
+.sidebar {
+	margin-left: -#{$padding__wrapper};
+	margin-right: -#{$padding__wrapper};
+	border-top: 1px solid $pt_barracks;
+	border-bottom: 1px solid $pt_barracks;
+	background-color: $pt_barracks_20;
+
+	@include media(tablet) {
+		width: $width__sidebar;
+		background-color: transparent;
+		border-bottom: none;
+		border-top: 5px solid $citadel_blue;
+		margin: 0;
+	}
+
+	nav {
+		white-space: nowrap;
+		overflow-x: auto;
+		overflow-y: hidden;
+
+		@include media(tablet) {
+			white-space: normal;
+			overflow-x: visible;
+			overflow-y: visible;
+		}
+
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			font-size: $size_7;
+		}
+
+		li {
+			display: inline-block;
+			margin-left: -4px;
+			line-height: $font__line-height-heading;
+			border-right: 1px solid $pt_barracks;
+
+			&:nth-of-type(1) {
+				margin-left: 0;
+			}
+
+			@include media(tablet) {
+				display: block;
+				margin-left: 0;
+				border-right: none;
+				border-bottom: 1px solid $pt_barracks;
+				padding: $size_5 0;
+			}
+		}
+
+		a {
+			display: block;
+			padding: $size_5 $size_7;
+			color: $citadel_blue;
+			border-bottom: none;
+			font-weight: bold;
+			@include media(tablet) {
+				padding: 0;
+				display: initial;
+				border-bottom: 1px solid transparent;
+
+				&:hover,
+				&:focus {
+					border-bottom-color: $citadel_blue;
+				}
+			}
+		}
+	}
+}
+
+.content-container {
+
+	@include media(tablet) {
+		width: calc(100% - #{$width__sidebar});
+	}
 }
 
 .entry-content {
 	font-size: $font__size_md;
+	padding-top: $size_17;
+
+	&:nth-child(1) {
+		margin-top: 0;
+	}
+
+	&:nth-last-child(1) {
+		margin-bottom: 0;
+	}
+
+	@include media(tablet) {
+		padding-top: 0;
+		padding-left: $padding__wrapper;
+	}
+}
+
+#colophon {
+	background-color: $citadel_blue;
 }

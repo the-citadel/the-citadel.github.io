@@ -2,30 +2,97 @@
 <html lang="en" dir="ltr">
 	<head>
 		<meta charset="utf-8">
-		<title>Citadel Styles Demo</title>
+		<title>The Citadel Framework</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="styles/citadel-framework.css">
 		<link rel="stylesheet" href="styles/custom.css">
 	</head>
 	<body>
-		<main class="entry-content">
+		<nav class="main-nav">
 			<div class="wrapper">
-				<h1>The Citadel Framework</h1>
-				<p>This is the homepage for The Citadel Framework which was establishes base styles for all websites for <a href="https://citadel.edu/">The Citadel.</a></p>
-				<nav>
-					<ul>
-						<li><a href="#headers">Headers</a></li>
-					</ul>
-				</nav>
-				<section>
-					<h2><a id="headers">Headers</a></h2>
-					<h1>Header 1</h1>
-					<h2>Header 2</h2>
-					<h3>Header 3</h3>
-					<h4>Header 4</h4>
-					<h5>Header 5</h5>
-					<h6>Header 6</h6>
-				</section>
+				<ul>
+					<li>
+						<a href="#">Link</a>
+						<ul class="submenu">
+							<li><a href="#"></a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<main>
+			<header class="entry-header">
+				<h1 class="wrapper">The Citadel Framework</h1>
+			</header>
+			<div class="page-content">
+				<div class="wrapper flex-container-md">
+					<aside class="sidebar" role="complementary">
+						<nav>
+							<ul>
+								<li><a href="#headers">Headers</a></li>
+								<li><a href="#fonts">Fonts</a></li>
+								<li><a href="#colors">Colors</a></li>
+							</ul>
+						</nav>
+					</aside>
+					<div class="content-container">
+						<div class="entry-content">
+							<p>The Citadel Framework establishes base styles for all websites owned by <a href="https://citadel.edu/" target="_blank" rel="nofollow noreferrer">The Citadel.</a> This Framework complies with the college's <a href="https://brand.citadel.edu/" target="_blank" rel="nofollow noreferrer">Brand Guidelines</a> and is meant to demonstrate the proper usage of these guidelines on Citadel websites. Websites may contain items that are not mentioned in the standard brand guidelines and should then default to the framework outlined below. Anything outlined below that does not directly follow the standard brand guidelines has been approved by the brand manager.</p>
+							<section id="headers">
+								<h2>Headers</h2>
+								<h1>Header 1</h1>
+								<h2>Header 2</h2>
+								<h3>Header 3</h3>
+								<h4>Header 4</h4>
+								<h5>Header 5</h5>
+								<h6>Header 6</h6>
+							</section>
+							<section id="fonts">
+								<h2>Fonts</h2>
+								<h3>Poynter Old Style Display</h3>
+								<p>The Citadel uses Poynter Oldstyle Display for all headings on the website (like the one above). For all other elements of text The Citadel uses the font Open Sans (like this paragraph). There are very few instances where exceptions are made.</p>
+							</section>
+							<section id="colors">
+								<h2>Colors</h2>
+								<h3>Primary Colors</h3>
+								<div class="flex-container flex-middle colors">
+									<div class="flex-item citadel-navy-bg white"><p>Navy</p></div>
+									<div class="flex-item citadel-blue-bg white"><p>Blue</p></div>
+									<div class="flex-item white-bg shako"><p>White</p></div>
+								</div>
+								<h3>Secondary Colors</h3>
+								<div class="flex-container flex-middle colors">
+									<div class="flex-item pt-barracks-bg shako"><p>PT Barracks</p></div>
+									<div class="flex-item pt-barracks-80 shako"></div>
+									<div class="flex-item pt-barracks-60 shako"></div>
+									<div class="flex-item pt-barracks-40 shako"></div>
+									<div class="flex-item pt-barracks-20 shako"></div>
+								</div>
+								<div class="flex-container flex-middle colors">
+									<div class="flex-item shako-bg white">Shako</div>
+									<div class="flex-item shako-80 white"></div>
+									<div class="flex-item shako-60 white"></div>
+									<div class="flex-item shako-40 white"></div>
+									<div class="flex-item shako-20 white"></div>
+								</div>
+								<div class="flex-container flex-middle colors">
+									<div class="flex-item band-gold-bg white">Band of Gold</div>
+									<div class="flex-item band-gold-80 white"></div>
+									<div class="flex-item band-gold-60 white"></div>
+									<div class="flex-item band-gold-40 white"></div>
+									<div class="flex-item band-gold-20 white"></div>
+								</div>
+								<div class="flex-container flex-middle colors">
+									<div class="flex-item officer-sash-bg white">Band of Gold</div>
+									<div class="flex-item officer-sash-80 white"></div>
+									<div class="flex-item officer-sash-60 white"></div>
+									<div class="flex-item officer-sash-40 white"></div>
+									<div class="flex-item officer-sash-20 white"></div>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
 			</div>
 		</main>
 	</body>

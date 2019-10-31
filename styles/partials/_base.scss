@@ -10,6 +10,8 @@ html,
 body {
     font-size: $font__size_base;
     font-family: $font__body;
+    background-color: $color__background-body;
+    color: $color__text-main;
 }
 
 h1,
@@ -19,6 +21,7 @@ h4,
 h5,
 h6 {
     font-family: $font__heading;
+    color: $citadel_navy;
 }
 
 h1 {
@@ -43,4 +46,21 @@ h5 {
 
 h6 {
     font-size: $font__size_h6;
+}
+
+a {
+    text-decoration: none;
+    border-bottom: 1px solid $citadel_blue;
+    color: $color__link;
+
+    &:hover,
+    &:focus {
+        color:$color__link-hover;
+    }
+
+    &:not([href]) {
+        color: inherit;
+        border-bottom: none;
+        position: relative;
+    }
 }

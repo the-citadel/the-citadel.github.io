@@ -345,8 +345,10 @@ template {
 
 html,
 body {
-  font-size: 14px;
+  font-size: 18px;
   font-family: "open-sans", helvetica, arial, sans-serif;
+  background-color: #ffffff;
+  color: #282E36;
 }
 
 h1,
@@ -356,6 +358,7 @@ h4,
 h5,
 h6 {
   font-family: "poynter-oldstyle-display", "adobe-garamond-pro", times, serif;
+  color: #1F3A60;
 }
 
 h1 {
@@ -380,6 +383,20 @@ h5 {
 
 h6 {
   font-size: 0.75rem;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px solid #3975B7;
+  color: #282E36;
+}
+a:hover, a:focus {
+  color: #3975B7;
+}
+a:not([href]) {
+  color: inherit;
+  border-bottom: none;
+  position: relative;
 }
 
 .citadel-navy {
@@ -513,6 +530,11 @@ h6 {
 }
 .officer-sash-20 {
   background-color: rgba(125, 41, 53, 0.2);
+}
+
+.wrapper {
+  padding-left: 5.62vw;
+  padding-right: 5.62vw;
 }
 
 .entry-content {

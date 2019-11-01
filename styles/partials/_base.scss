@@ -1,8 +1,9 @@
 /*
- # Citadel Base Styles #
+ # Base Styles #
 */
 
 @import url('https://use.typekit.net/onz2qme.css');
+@import '../assets/fontawesome/css/all.min.css';
 
 *,
 *:before,
@@ -45,10 +46,55 @@ select,
 optgroup,
 textarea {
 	color: $color__text-main;
+    background-color: $pt_barracks_20;
+    border: 1px solid $pt_barracks;
 	font-family: $font__body;
 	font-weight: 400;
 	line-height: $font__line-height-body;
+    margin-bottom: $size_7;
 	text-rendering: optimizeLegibility;
+}
+
+button,
+input[type="submit"] {
+    cursor: pointer;
+    font-weight: 600;
+    padding: $size_1 $size_3;
+    @include element-transition(color, background-color);
+
+    &.btn-sm {
+        border: none;
+        padding: 0 $size_1;
+    }
+}
+
+input[type="submit"],
+.btn {
+    background-color: $citadel_blue;
+    border: 2px solid $citadel_blue;
+    color: #FFFFFF;
+
+    &:hover,
+    &:focus {
+        background-color: #FFFFFF;
+        color: $citadel_blue;
+    }
+}
+
+.btn-alt {
+    background-color: $pt_barracks_20;
+    border: 2px solid $pt_barracks;
+    color: $shako_80;
+
+    &:hover,
+    &:focus {
+        background-color: $pt_barracks;
+    }
+}
+
+.btn-clr {
+    background-color: transparent;
+    color: inherit;
 }
 
 h1,
@@ -67,26 +113,38 @@ h6 {
 
 h1 {
     font-size: $font__size_h1;
+    margin-top: $size_13;
+    margin-bottom: $size_7;
 }
 
 h2 {
     font-size: $font__size_h2;
+    margin-top: $font__size_h2;
+    margin-bottom: $size_7;
 }
 
 h3 {
     font-size: $font__size_h3;
+    margin-top: $font__size_h3;
+    margin-bottom: $size_7;
 }
 
 h4 {
     font-size: $font__size_h4;
+    margin-top: $font__size_h4;
+    margin-bottom: $size_7;
 }
 
 h5 {
     font-size: $font__size_h5;
+    margin-top: $font__size_h5;
+    margin-bottom: $size_7;
 }
 
 h6 {
     font-size: $font__size_h6;
+    margin-top: $font__size_h6;
+    margin-bottom: $size_7;
 }
 
 p {

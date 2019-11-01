@@ -1,3 +1,46 @@
+
+// # Accessibility #
+.skip {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	a {
+	    background-color: #fff;
+	    color: #3975B7;
+	    display: block;
+	    padding: $size_3 $size_11;
+	    font-size: $font__size_md;
+	}
+}
+
+.show-on-focus:not(:focus):not(:active) {
+    clip: rect(0 0 0 0) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+}
+
+.screen-reader-text {
+    border: 0;
+    clip: rect(0 0 0 0) !important;
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+// # Content #
+
 .wrapper {
 	padding-left: $padding__wrapper;
 	padding-right: $padding__wrapper;
@@ -8,6 +51,89 @@
 
 .masthead {
 	background-color: $citadel_navy;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	a {
+		color: #FFFFFF;
+		border-bottom-color: transparent;
+
+		&:hover,
+		&:focus {
+			border-bottom-color: #FFFFFF;
+		}
+	}
+}
+
+.top-header {
+	background-color: $citadel_dark_navy;
+	color: #FFFFFF;
+	@include flex-middle;
+	@include flex-item;
+	@include flex-right;
+
+	nav {
+		font-size: $size_5;
+
+		ul {
+			@include flex-container;
+		}
+
+		li {
+			@include flex-middle;
+			@include flex-item;
+		}
+
+		a {
+			margin: 0 $size_1;
+			white-space: nowrap;
+		}
+
+		button {
+			margin: 0 0 0 $size_1;
+			padding: $size_1 $size_3;
+		}
+
+		.btn-clr {
+
+			&:hover {
+					span {
+						border-bottom-color: #FFFFFF;
+					}
+			}
+
+			span {
+				border-bottom: 1px solid transparent;
+				@include element-transition(border-color);
+			}
+		}
+	}
+
+	.search-toggle {
+
+		&::before {
+			content: "\f002";
+		    font-family: "Font Awesome 5 Free";
+		    font-size: $size_6;
+		    font-weight: 900;
+			margin-right: $size_1;
+		}
+	}
+
+	.tools-toggle {
+
+		span::after {
+			content: "\f078";
+		    font-family: "Font Awesome 5 Free";
+		    font-size: $size_5;
+		    font-weight: 900;
+			margin-left: $size_1;
+		}
+	}
 }
 
 .main-nav {
@@ -19,17 +145,53 @@
 		list-style: none;
 	}
 
-	a {
-		color: #FFFFFF;
-	}
-
 	ul:first-of-type:not(.submenu) {
 		@include flex-center;
 		@include flex-container;
 
 		> li {
+			text-align: center;
+			text-transform: uppercase;
 			@include flex-middle;
 			@include flex-item;
+			@include flex-grow (1);
+			@include element-transition(color, background-color);
+
+			&:hover,
+			&:focus {
+				background-color: #FFFFFF;
+
+				> a {
+					color: $citadel_navy;
+					background-color: $pt_barracks_40;
+				}
+			}
+
+			&.has-submenu {
+
+				a::after {
+					margin-left: 0.42rem;
+				    font-family: "Font Awesome 5 Free";
+				    font-weight: 900;
+				    content: "\f078";
+				    font-size: 0.6666666667rem;
+				}
+			}
+
+			> a {
+				border-bottom: none;
+				color: #FFFFFF;
+				display: block;
+				font-size: $size_6;
+				font-weight: 600;
+				padding: $size_1 $size_7;
+				width: 100%;
+				@include element-transition(color, background-color);
+
+				@include media(tablet) {
+					padding: $size_1 0;
+				}
+			}
 		}
 	}
 
@@ -94,7 +256,7 @@
 
 		li {
 			display: inline-block;
-			margin-left: -4px;
+			margin-left: -5px;
 			line-height: $font__line-height-heading;
 			border-right: 1px solid $pt_barracks;
 
@@ -142,12 +304,20 @@
 	font-size: $font__size_md;
 	padding-top: $size_17;
 
-	&:nth-child(1) {
+	> *:nth-child(1) {
 		margin-top: 0;
+
+		*:nth-child(1) {
+			margin-top: 0;
+		}
 	}
 
-	&:nth-last-child(1) {
+	> *:nth-last-child(1) {
 		margin-bottom: 0;
+
+		*:nth-last-child(1) {
+			margin-bottom: 0;
+		}
 	}
 
 	@include media(tablet) {

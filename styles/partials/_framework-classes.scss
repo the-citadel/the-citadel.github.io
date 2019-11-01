@@ -1,4 +1,6 @@
-// Colors
+/*
+ # Citadel Colors #
+*/
 @each $name, $color in $citadel_colors {
 	.#{$name} {
 		color: $color;
@@ -15,7 +17,9 @@
 	}
 }
 
-// Fonts
+/*
+ # Citadel Fonts #
+*/
 .font-body {
 	font-family: $font__body;
 }
@@ -28,7 +32,9 @@
 	@include clearfix;
 }
 
-// Flex elements
+/*
+ # Flex Elements #
+*/
 .flex-container {
 	@include responsive {
 		@include flex-container;

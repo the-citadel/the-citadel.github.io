@@ -62,11 +62,18 @@
 
 
 @mixin flex-left {
-	float: left;
 	-webkit-box-pack: start;
 	-webkit-justify-content: flex-start;
 		-ms-flex-pack: start;
 			justify-content: flex-start;
+
+	@media screen\9 {
+		float: left;
+	}
+
+	@media screen\0 {
+		float: left;
+	}
 }
 
 @mixin flex-center {
@@ -77,11 +84,18 @@
 }
 
 @mixin flex-right {
-	float: right;
 	-webkit-box-pack: end;
 	-webkit-justify-content: flex-end;
 		-ms-flex-pack: end;
 			justify-content: flex-end;
+
+	@media screen\9 {
+		float: right;
+	}
+
+	@media screen\0 {
+		float: right;
+	}
 }
 
 @mixin flex-top {
